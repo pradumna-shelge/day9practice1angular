@@ -1,0 +1,18 @@
+<ng-container *ngIf=" pro != null">
+
+    <h3>Product Details Page</h3>
+     
+     
+    product : {{pro.name}}
+    price : {{ pro.price}}
+    <ul class="nav navbar-nav">
+        <li><a [routerLink]="['overview']">OverView </a></li>
+        <li><a [routerLink]="['spec']">Specification </a></li>
+    </ul>
+     
+    <router-outlet></router-outlet>
+     
+    <p>
+        <a class='btn btn-default' (click)="onBack()">Back </a>
+    </p>
+</ng-container>
